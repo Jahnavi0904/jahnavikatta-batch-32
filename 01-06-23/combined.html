@@ -1,0 +1,30 @@
+<html>
+    <script>
+        amount = 100
+let Environment=prompt('Enter Environment:dev,stage,test,prod'); 
+ if (Environment=='dev')
+{
+        sendamount = amount*110/100
+}
+        else if (Environment=='stage')
+        {
+        sendamount = amount*130/100
+            
+        }
+        else if (Environment=='test')
+        {
+       sendamount = amount*120/100
+            
+        }
+        else if (Environment=='prod')
+        {
+        sendamount=amount*105/100
+        }
+        else
+        {
+                sendamount=amount
+        }
+        console.log(sendamount)
+
+</script>
+</html>
