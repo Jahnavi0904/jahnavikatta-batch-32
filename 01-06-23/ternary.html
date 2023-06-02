@@ -1,8 +1,8 @@
 <html>
     <script>
-        let Environment=prompt('Enter Environment:dev,stage,test,prod')
+        let Environment=prompt('Enter Environment:div,stage,test,prod')
         let amount=200
-        let sendamount=Environment=="div"?amount*110/100:Environment=="stage"?amount*130/100:Environment=="test"?amount*120/100:Environment=="prod"?log(amount*105/100):amount
-        console.log(amount)
+        let sendamount=Environment=="div"?console.log (amount*110/100):Environment=="stage"?console.log(amount*130/100):Environment=="test"?console.log(amount*120/100):Environment=="prod"?console.log(amount*105/100):console.log(amount)
+        
     </script>
 </html>
