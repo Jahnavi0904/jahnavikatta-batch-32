@@ -1,0 +1,19 @@
+<html>
+    <script>
+        let newhobby=prompt("let the hobby:")
+        let hobbies=["tv","chess","drawing"]
+        function deleteHobby() {
+             hobbies.splice(hobbies.indexOf(newhobby), 1);
+        }
+        function add(){    
+           hobbies.push(newhobby)     
+        }
+        if(hobbies.includes(newhobby)){
+            deleteHobby()
+        } 
+        else{ 
+             add()
+        }
+        console.log(hobbies)
+    </script>
+</html>
