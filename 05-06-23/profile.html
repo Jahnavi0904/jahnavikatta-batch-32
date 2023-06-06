@@ -1,0 +1,16 @@
+<html>
+    <title>Profile information</title>
+    <body>
+    <script>
+        function display(){
+            var profile={FirstName:"Jahnavi",LastName:"katta",Age:"23",Emailid:"jahnavikatta2000@gmail.com",Phone:"6185241313"};
+         
+         var information=JSON.stringify(profile);
+        document.getElementById("Details").innerHTML=information;
+        }
+
+</script>
+     <button type="submit" onclick="display()" >Submit</button>
+    </body>
+    <div id="Details"></div>
+</html>
