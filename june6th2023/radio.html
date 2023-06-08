@@ -1,0 +1,51 @@
+<html>
+    <script>
+        function displayProfile() {
+            var firstName = document.getElementById("Fname").value;
+            var lastName = document.getElementById("Lname").value;
+            var dob = document.getElementById("dob").value;
+            var gender = document.querySelector('input[name="gender"]:checked').value
+            var email = document.getElementById("email").value;
+            var phoneNumber = document.getElementById("PN").value;      
+            var hobbies = [];
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        for (var i = 0; i < checkboxes.length; i++) {
+            hobbies.push(checkboxes[i].value);
+        }
+
+        var profileInfo = "First Name: " + firstName + "<br>" +
+                          "Last Name: " + lastName + "<br>" +
+                          "Gender: " + gender + "<br>" +
+                          "Email: " + email + "<br>" +
+                          "Phone Number: " + phoneNumber + "<br>" +
+                          "Date of Birth: " + dob + "<br>" +
+                          "Hobbies: " + hobbies.join(", ");
+
+        document.getElementById("profileOutput").innerHTML = profileInfo;
+    }
+</script>
+
+
+    </head>
+<body>
+    <form>
+        <input type="text" id="Fname" placeholder="First Name"><br>
+        <input type="text" id="Lname" placeholder="Last Name"><br>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="Female"><br>
+        <input type="email" id="email" placeholder="Email"><br>
+        <input type="date" id="dob" placeholder="Date of Birth"><br>
+        <input type="number" id="PN" placeholder="Phone Number"><br>
+        <label for="hobby1">Hobby 1</label>
+        <input type="checkbox" id="hobby1" name="hobbies" value="Hobby 1">
+        <label for="hobby2">Hobby 2</label>
+        <input type="checkbox" id="hobby2" name="hobbies" value="Hobby 2">
+        <label for="hobby3">Hobby 3</label>
+        <input type="checkbox" id="hobby3" name="hobbies" value="Hobby 3"><br>
+        <button type="button" onclick="displayProfile()">Submit</button>
+    </form>
+    <div id="profileOutput"></div>
+</body>
+</html>
